@@ -21,14 +21,18 @@ content="IE=7.0000" http-equiv="X-UA-Compatible">
 <DIV class=top>
   <DIV class=header>
     <DIV class=h_top>
-    <P class=fr><A  onclick=javascript:addBookmark(this) title=收藏本站  href="javascript:void(0);">收藏本站</A>|<A title=网站地图  href="/google.xml" target=_blank>xml地图</A>|<A title=联系我们  href="/wanggebu/?Contact.html" target=_blank>联系我们</A></P> </DIV>
+    <P class=fr>
+      <A  title=区域推广  href="/quyu.html">区域推广</A>|
+      <A  onclick=javascript:addBookmark(this) title=收藏本站  href="javascript:void(0);">收藏本站</A>|
+      <A title=网站地图  href="/google.xml" target=_blank>xml地图</A>|
+      <A title=联系我们  href="/?Contact.html" target=_blank>联系我们</A></P> </DIV>
     <DIV class=h_con>
       <H1 class=fl><A  href="/"><IMG class=png  src="{$SiteSkin$}img/logo.png"></A><SPAN>厂家直营&nbsp;质优价廉&nbsp;售后无忧</SPAN></H1>
       <DIV class="h_pho fr"><A  href="/"><IMG  src="{$SiteSkin$}img/tel.png"></A></DIV>
     </DIV>
     <DIV class=h_nav>
       <UL>
-        <LI><A title=网站首页 href="/"><SPAN>网站首页</SPAN></A></LI>
+        <LI><A title=网站首页 href="{$SiteUrl$}"><SPAN>网站首页</SPAN></A></LI>
         {$For(Nav,1/0/1/0)$}
         <LI><A title={$NavName$} href="{$NavUrl$}"><SPAN>{$NavName$}</SPAN></A></LI> {$Next$}
       </UL>
@@ -79,10 +83,10 @@ jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:200});
     <P><B>热门关键词：</B> {$For(ProductList,1/4/0/5/0/0/0/0/0)$} <A title={$ProductListTitle$}  href="{$ProductListUrl$}">{$ProductListTitle$}</A>{$Next$}</P>
   </DIV>
   <DIV class="prolist fl">
-    <H2><A  href="?Product/" target=_blank><IMG  src="{$SiteSkin$}img/listbt.jpg"></A></H2>
+    <H2><A  href="{$ProductAllUrl$}" target=_blank><IMG  src="{$SiteSkin$}img/listbt.jpg"></A></H2>
     <DIV class=list_c0>
       <DIV class=list_c>
-      <h4><a href="?Product/">按名称分类</a></h4>
+      <h4><a href="{$ProductAllUrl$}">按名称分类</a></h4>
 <ul class="u_lst1 f_cb">
 {$For(ProductList,1/4/0/0/0/0/0/0/0)$}
 <li><a title="{$ProductListTitle$}" href="{$ProductListUrl$}">{$ProductListTitle$}</a></li>
@@ -93,7 +97,7 @@ jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:200});
     </DIV>
   </DIV>
   <DIV class="pro fr">
-    <H2><SPAN class=fr><A  href="?Product/"  target=_blank><IMG src="{$SiteSkin$}img/more2.gif"></A></SPAN><A href="/" target=_blank><IMG  src="{$SiteSkin$}img/probt.gif"></A></H2>
+    <H2><SPAN class=fr><A  href="{$ProductAllUrl$}" target=_blank><IMG src="{$SiteSkin$}img/more2.gif"></A></SPAN><A href="/" target=_blank><IMG  src="{$SiteSkin$}img/probt.gif"></A></H2>
     <DIV class=p_c>
       <UL>
 {$For(ProductList,1/4/0/6/0/0/0/0/0)$}
@@ -196,9 +200,9 @@ jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:200});
 
 <div class="dt_gd fr">
     <div class="bargd">
-        <span class="fr"><a target="_blank" title="more" href="?News/"> <img alt="more" src="{$SiteSkin$}img/more.gif"></a></span>
+        <span class="fr"><a target="_blank" title="more" href="{$News_All_Url$}"> <img alt="more" src="{$SiteSkin$}img/more.gif"></a></span>
         <ul>
-            <li class="li01_dt cur"><a target="_blank" title="最新动态" href="/News/"></a></li>
+            <li class="li01_dt cur"><a target="_blank" title="最新动态" href="{$News_All_Url$}"></a></li>
        
         </ul>
     </div>
@@ -258,7 +262,7 @@ jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:200});
   
   
   <DIV class="new fl">
-    <H2><SPAN class=fr><A title=more href="?news/" target=_blank><IMG alt=more src="{$SiteSkin$}img/more.gif"></A> </SPAN><A title=企业动态 href="?News/" target=_blank>企业动态</A> </H2>
+    <H2><SPAN class=fr><A title=more href="{$News_All_Url$}" target=_blank><IMG alt=more src="{$SiteSkin$}img/more.gif"></A> </SPAN><A title=企业动态 href="{$News_All_Url$}" target=_blank>企业动态</A> </H2>
     <DIV class=n_con> {$For(ArticleList,1/3/0/1/0/0/0/16/1)$}
       <P><A title={$ArticleListTitle$} 
 href="{$ArticleListUrl$}" target=_blank><IMG  title={$ArticleListTitleAll$} class=loadimg alt={$ArticleListTitleAll$}  src="{$ArticleListPic$}"></A> </P>
@@ -291,7 +295,7 @@ href="{$ArticleListUrl$}" target=_blank><IMG  title={$ArticleListTitleAll$} clas
     </DIV>
   </DIV>
   <DIV class="faq new fr">
-    <H2><SPAN class=fr><A title=more href="?Article38/" target=_blank><IMG alt="" src="{$SiteSkin$}img/more.gif"></A></SPAN><A title=常见问题解答 href="?Article38/" target=_blank>常见问题解答</A></H2>
+    <H2><SPAN class=fr><A title=more href="{$Article_All_Url$}" target=_blank><IMG alt="" src="{$SiteSkin$}img/more.gif"></A></SPAN><A title=常见问题解答 href="{$Article_All_Url$}" target=_blank>常见问题解答</A></H2>
     <DIV id=ulOrderAnn class=fa_con> {$For(ArticleList,1/38/0/0/0/0/0/15/0)$}
       <DL>
         <DT><A title={$ArticleListTitle$} href="{$ArticleListUrl$}" target=_blank>{$ArticleListTitle$}</A> </DT>

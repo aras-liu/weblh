@@ -37,6 +37,10 @@ Dim FKDB,FKFun,FKFso,FKHtml,FKTemplate,FKJpeg,FKAdmin,FKPageCode
 Dim FKModuleId,FKModuleName
 Dim SiteDir,SiteDBDir,SiteData
 Dim MyModuleId,MyId,MyType
+Dim City,CityName
+Dim Product_All_Url
+Dim News_All_Url
+Dim Article_All_Url
 %>
 <!--#Include File="Conn.asp"-->
 <!--#Include File="Md5.asp"-->
@@ -44,6 +48,11 @@ Dim MyModuleId,MyId,MyType
 <%
 
 '置默认值
+Product_All_Url="?Product/"
+News_All_Url="?News/"
+Article_All_Url="?Article38/"
+City=""
+CityName=""
 Set FKDB=New Cls_DB
 Set FKFun=New Cls_Fun
 Set FKFso=New Cls_Fso

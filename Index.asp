@@ -8,11 +8,42 @@
 Dim PageCode,PageCodes,PageUrl,ModuleUrl
 Set FKTemplate=New Cls_Template
 Set FKPageCode=New Cls_PageCode
-
+Dim ct
 If Fk_Site_Html=2 Then
 	Response.Redirect(SiteDir&"Index.html")
 ElseIf Fk_Site_Html=0 Then
+
+	
 	PageUrl=FKFun.HTMLEncode(Request.QueryString())
+	
+	'response.write("<hr/>")
+	'City="henan"
+	'response.write("PageUrl="&PageUrl&"<br/>")
+	If Instr(PageUrl,"/")>0 Then
+		ct=Split(PageUrl,"/")(0)
+		'ct="hengshui"
+		'response.write("ct="&ct&"<br/>")
+		CityName = FKFun.GetCityName(ct)
+		'response.write("CityName="&CityName&"<br/>")
+		If CityName<>"" Then
+			City=ct
+			Fk_Site_Url= Fk_Site_Url & "?" &City & "/"
+			Product_All_Url="?"&City&"/Product/"
+			News_All_Url="?"&City&"/News/"
+			Article_All_Url="?"&City&"/Article38/"
+			'response.write("Fk_Site_Url="&Fk_Site_Url&"<br/>")
+			PageUrl=Replace(PageUrl,ct&"/","")
+		Else
+			Fk_Site_Url ="www.hblhjgj.com"
+			Product_All_Url="?Product/"
+			News_All_Url="?News/"
+			Article_All_Url="?Article38/"
+			City=""
+			CityName=""
+		End If
+	End If
+	'response.write("<hr/>")
+	
 	If Instr(PageUrl,"&")>0 Then
 		PageUrl=Split(PageUrl,"&")(0)
 	End If

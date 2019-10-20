@@ -23,6 +23,10 @@ Class Cls_Template
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteDescription$}",Fk_Site_Description)
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteSkin$}",SiteDir&"Skin/"&Fk_Site_Template&"/")
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteDir$}",SiteDir)
+		TemplateCode=ReplaceTag(TemplateCode,"{$ProductAllUrl$}",Product_All_Url)
+		TemplateCode=ReplaceTag(TemplateCode,"{$NewsAllUrl$}",News_All_Url)
+		TemplateCode=ReplaceTag(TemplateCode,"{$ArticleAllUrl$}",Article_All_Url)
+		
 		'处理自定义标签数据
 		For Each Temp In Fk_Site_Field
 			TemplateCode=ReplaceTag(TemplateCode,"{$Site_Field_"&Split(Temp,"|-Fangka_Field-|")(0)&"$}",Split(Temp,"|-Fangka_Field-|")(1))
@@ -298,7 +302,7 @@ Class Cls_Template
 			TemplateCode=ReplaceTag(TemplateCode,"{$ModuleName$}",TempName)
 			TemplateCode=ReplaceTag(TemplateCode,"{$ModuleUrl$}",TempMUrl)
 			TemplateCode=ReplaceTag(TemplateCode,"{$ArticleId$}",pId)
-			TemplateCode=ReplaceTag(TemplateCode,"{$ArticleTitle$}",Rs("Fk_Article_Title"))
+			TemplateCode=ReplaceTag(TemplateCode,"{$ArticleTitle$}",CityName&Rs("Fk_Article_Title"))
 			TemplateCode=ReplaceTag(TemplateCode,"{$ArticleKeyword$}",Rs("Fk_Article_Keyword"))
 			TemplateCode=ReplaceTag(TemplateCode,"{$ArticleDescription$}",Rs("Fk_Article_Description"))
 			TemplateCode=ReplaceTag(TemplateCode,"{$ArticlePic$}",Rs("Fk_Article_Pic"))
@@ -325,12 +329,15 @@ Class Cls_Template
 		Next
 		TemplateCode=ReplaceTag(TemplateCode,"{$PageCrumbs$}",GetPageCrumbs(TempLevelList,TempMUrl,TempName))
 		TemplateCode=ReplaceTag(TemplateCode,"{$ArticleContent$}",GetWordUrl(TempContent))
+		Dim ori
 		If Instr(TemplateCode,"{$ArticlePrevTitle$}")>0 Or Instr(TemplateCode,"{$ArticlePrevUrl$}")>0 Or Instr(TemplateCode,"{$ArticlePrevPic$}")>0 Then
 			Sqlstr="Select Fk_Article_Id,Fk_Article_Title,Fk_Module_Id,Fk_Module_Pic,Fk_Module_MUrl,Fk_Module_Type,Fk_Article_FileName,Fk_Article_Pic From [Fk_ArticleList] Where Fk_Article_Show=1 And Fk_Article_Id<"&pId&" And Fk_Module_Id="&TempModule&" Order By Fk_Article_Order Desc,Fk_Article_Id Desc"
 			Rs.Open Sqlstr,Conn,1,1
 			If Not Rs.Eof Then
-				TemplateCode=ReplaceTag(TemplateCode,"{$ArticlePrevTitle$}",Rs("Fk_Article_Title"))
-				TemplateCode=ReplaceTag(TemplateCode,"{$ArticlePrevUrl$}",GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Article_Id"),Rs("Fk_Article_FileName")))
+			    ori = GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Article_Id"),Rs("Fk_Article_FileName"))
+				ori= "/?"& City & "/" & Split(ori,"?")(1)
+				TemplateCode=ReplaceTag(TemplateCode,"{$ArticlePrevTitle$}",CityName&Rs("Fk_Article_Title"))
+				TemplateCode=ReplaceTag(TemplateCode,"{$ArticlePrevUrl$}",ori)
 				TemplateCode=ReplaceTag(TemplateCode,"{$ArticlePrevPic$}",Rs("Fk_Article_Pic"))
 			Else
 				TemplateCode=ReplaceTag(TemplateCode,"{$ArticlePrevTitle$}","无上一篇")
@@ -343,8 +350,10 @@ Class Cls_Template
 			Sqlstr="Select Fk_Article_Id,Fk_Article_Title,Fk_Module_Id,Fk_Module_Pic,Fk_Module_MUrl,Fk_Module_Type,Fk_Article_FileName,Fk_Article_Pic From [Fk_ArticleList] Where Fk_Article_Show=1 And Fk_Article_Id>"&pId&" And Fk_Module_Id="&TempModule&" Order By Fk_Article_Order Asc,Fk_Article_Id Asc"
 			Rs.Open Sqlstr,Conn,1,1
 			If Not Rs.Eof Then
-				TemplateCode=ReplaceTag(TemplateCode,"{$ArticleNextTitle$}",Rs("Fk_Article_Title"))
-				TemplateCode=ReplaceTag(TemplateCode,"{$ArticleNextUrl$}",GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Article_Id"),Rs("Fk_Article_FileName")))
+				ori = GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Article_Id"),Rs("Fk_Article_FileName"))
+				ori= "/?"& City & "/" & Split(ori,"?")(1)
+				TemplateCode=ReplaceTag(TemplateCode,"{$ArticleNextTitle$}",CityName&Rs("Fk_Article_Title"))
+				TemplateCode=ReplaceTag(TemplateCode,"{$ArticleNextUrl$}",ori)
 				TemplateCode=ReplaceTag(TemplateCode,"{$ArticleNextPic$}",Rs("Fk_Article_Pic"))
 			Else
 				TemplateCode=ReplaceTag(TemplateCode,"{$ArticleNextTitle$}","无下一篇")
@@ -372,6 +381,7 @@ Class Cls_Template
 	'参    数：
 	'==============================
 	Public Function ProductChange(TemplateCode,pId)
+		Dim ori
 		Dim TempName,TempMUrl,TempContent,TempModule,TempLevelList,TempTime,t_TempArr,t_Temp,TempAdmin
 		Sqlstr="Select Fk_Product_Title,Fk_Product_Keyword,Fk_Product_Description,Fk_Product_Content,Fk_Product_Pic,Fk_Product_PicBig,Fk_Product_PicList,Fk_Product_Field,Fk_Product_Time,Fk_Product_Admin,Fk_Module_Id,Fk_Module_Pic,Fk_Module_Menu,Fk_Module_Name,Fk_Module_MUrl,Fk_Module_LevelList,Fk_Module_Type,Fk_Module_Level From [Fk_ProductList] Where Fk_Product_Show=1 And Fk_Product_Id=" & pId
 		Rs.Open Sqlstr,Conn,1,1
@@ -391,7 +401,7 @@ Class Cls_Template
 			TemplateCode=ReplaceTag(TemplateCode,"{$ModuleName$}",TempName)
 			TemplateCode=ReplaceTag(TemplateCode,"{$ModuleUrl$}",TempMUrl)
 			TemplateCode=ReplaceTag(TemplateCode,"{$ProductId$}",pId)
-			TemplateCode=ReplaceTag(TemplateCode,"{$ProductTitle$}",Rs("Fk_Product_Title"))
+			TemplateCode=ReplaceTag(TemplateCode,"{$ProductTitle$}",CityName&Rs("Fk_Product_Title"))
 			TemplateCode=ReplaceTag(TemplateCode,"{$ProductKeyword$}",Rs("Fk_Product_Keyword"))
 			TemplateCode=ReplaceTag(TemplateCode,"{$ProductDescription$}",Rs("Fk_Product_Description"))
 			TemplateCode=ReplaceTag(TemplateCode,"{$ProductPic$}",Rs("Fk_Product_Pic"))
@@ -421,8 +431,10 @@ Class Cls_Template
 			Sqlstr="Select Fk_Product_Id,Fk_Module_Pic,Fk_Product_Title,Fk_Module_Id,Fk_Module_MUrl,Fk_Module_Type,Fk_Product_FileName,Fk_Product_Pic From [Fk_ProductList] Where Fk_Product_Show=1 And Fk_Product_Id<"&pId&" And Fk_Module_Id="&TempModule&" Order By Fk_Product_Order Desc,Fk_Product_Id Desc"
 			Rs.Open Sqlstr,Conn,1,1
 			If Not Rs.Eof Then
-				TemplateCode=ReplaceTag(TemplateCode,"{$ProductPrevTitle$}",Rs("Fk_Product_Title"))
-				TemplateCode=ReplaceTag(TemplateCode,"{$ProductPrevUrl$}",GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Product_Id"),Rs("Fk_Product_FileName")))
+				ori=GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Product_Id"),Rs("Fk_Product_FileName"))
+				ori= "/?"& City & "/" & Split(ori,"?")(1)
+				TemplateCode=ReplaceTag(TemplateCode,"{$ProductPrevTitle$}",CityName&Rs("Fk_Product_Title"))
+				TemplateCode=ReplaceTag(TemplateCode,"{$ProductPrevUrl$}",ori)
 				TemplateCode=ReplaceTag(TemplateCode,"{$ProductPrevPic$}",Rs("Fk_Product_Pic"))
 			Else
 				TemplateCode=ReplaceTag(TemplateCode,"{$ProductPrevTitle$}","无上一篇")
@@ -435,8 +447,10 @@ Class Cls_Template
 			Sqlstr="Select Fk_Product_Id,Fk_Module_Pic,Fk_Product_Title,Fk_Module_Id,Fk_Module_MUrl,Fk_Module_Type,Fk_Product_FileName,Fk_Product_Pic From [Fk_ProductList] Where Fk_Product_Show=1 And Fk_Product_Id>"&pId&" And Fk_Module_Id="&TempModule&" Order By Fk_Product_Order Asc,Fk_Product_Id Asc"
 			Rs.Open Sqlstr,Conn,1,1
 			If Not Rs.Eof Then
-				TemplateCode=ReplaceTag(TemplateCode,"{$ProductNextTitle$}",Rs("Fk_Product_Title"))
-				TemplateCode=ReplaceTag(TemplateCode,"{$ProductNextUrl$}",GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Product_Id"),Rs("Fk_Product_FileName")))
+				ori=GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Product_Id"),Rs("Fk_Product_FileName"))
+				ori= "/?"& City & "/" & Split(ori,"?")(1)
+				TemplateCode=ReplaceTag(TemplateCode,"{$ProductNextTitle$}",CityName&Rs("Fk_Product_Title"))
+				TemplateCode=ReplaceTag(TemplateCode,"{$ProductNextUrl$}",ori)
 				TemplateCode=ReplaceTag(TemplateCode,"{$ProductNextPic$}",Rs("Fk_Product_Pic"))
 			Else
 				TemplateCode=ReplaceTag(TemplateCode,"{$ProductNextTitle$}","无下一篇")
@@ -692,6 +706,9 @@ Class Cls_Template
 			Else
 				NavUrl=GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id"))
 			End If
+			if City <>"" Then
+						NavUrl= "/?"& City & "/" & Split(NavUrl,"?")(1)
+			End If
 			FkNav=FkNav&BCode
 			FkNav=ReplaceTag(FkNav,"{$NavNo$}",ListNo)
 			FkNav=ReplaceTag(FkNav,"{$NavId$}",Rs("Fk_Module_Id"))
@@ -762,6 +779,9 @@ Class Cls_Template
 					NavUrl=sRs("Fk_Module_Url")
 				Else
 					NavUrl=GetModuleUrl(sRs("Fk_Module_MUrl"),sRs("Fk_Module_Type"),sRs("Fk_Module_Id"))
+				End If
+				if City <>"" Then
+						NavUrl= "/?"& City & "/" & Split(NavUrl,"?")(1)
 				End If
 				FkNavs=FkNavs&"<li><a href="""&NavUrl&""" title="""&sRs("Fk_Module_Name")&""""
 				If sRs("Fk_Module_Type")=5 Then
@@ -908,7 +928,7 @@ Class Cls_Template
 				If Rs("Fk_Article_Color")<>"" Then
 					TempTitle="<span style='color:"&Rs("Fk_Article_Color")&"'>"&TempTitle&"</span>"
 				End If
-				FkArticleList=FkArticleList&BCode
+				FkArticleList=FkArticleList&BCode 
 				FkArticleList=ReplaceTag(FkArticleList,"{$ListNo$}",ListNo)
 				FkArticleList=ReplaceTag(FkArticleList,"{$ListPageNo$}",ListPageNo)
 				FkArticleList=ReplaceTag(FkArticleList,"{$ModuleListId$}",Rs("Fk_Module_Id"))
@@ -916,14 +936,23 @@ Class Cls_Template
 				FkArticleList=ReplaceTag(FkArticleList,"{$ModuleListUrl$}",GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")))
 				FkArticleList=ReplaceTag(FkArticleList,"{$ModulePic$}",Rs("Fk_Module_Pic"))
 				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListId$}",Rs("Fk_Article_Id"))
-				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListTitle$}",TempTitle)
+				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListTitle$}",CityName&TempTitle)
 				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListTitleAll$}",TempTitleAll)
 				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListDescription$}",Rs("Fk_Article_Description"))
 				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListContent$}",Rs("Fk_Article_Content"))
+				Dim ori 
 				If Rs("Fk_Article_Url")<>"" Then
-					FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListUrl$}",Rs("Fk_Article_Url"))
+					ori=	Rs("Fk_Article_Url")
+					if City <>"" Then
+						ori= "/?"& City & "/" & Split(ori,"?")(1)
+					End If
+					FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListUrl$}",ori)
 				Else
-					FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListUrl$}",GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Article_Id"),Rs("Fk_Article_FileName")))
+					ori= GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Article_Id"),Rs("Fk_Article_FileName"))
+					if City <>"" Then
+						ori= "/?"& City & "/" & Split(ori,"?")(1)
+					End If
+					FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListUrl$}",ori)
 				End If
 				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListPic$}",Rs("Fk_Article_Pic"))
 				FkArticleList=ReplaceTag(FkArticleList,"{$ArticleListPicBig$}",Rs("Fk_Article_PicBig"))
@@ -969,6 +998,7 @@ Class Cls_Template
 		Dim time_TempArr,time_Temp
 		Dim content_TempArr,content_Temp
 		Dim search_TempArr,search_Temp
+		Dim ori
 		ListNo=1
 		ListPageNo=1
 		'判断合法性
@@ -1092,14 +1122,24 @@ Class Cls_Template
 				FkProductList=ReplaceTag(FkProductList,"{$ModuleListUrl$}",GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")))
 				FkProductList=ReplaceTag(FkProductList,"{$ModulePic$}",Rs("Fk_Module_Pic"))
 				FkProductList=ReplaceTag(FkProductList,"{$ProductListId$}",Rs("Fk_Product_Id"))
-				FkProductList=ReplaceTag(FkProductList,"{$ProductListTitle$}",TempTitle)
+				FkProductList=ReplaceTag(FkProductList,"{$ProductListTitle$}",CityName&TempTitle)
 				FkProductList=ReplaceTag(FkProductList,"{$ProductListTitleAll$}",TempTitleAll)
 				FkProductList=ReplaceTag(FkProductList,"{$ProductListDescription$}",Rs("Fk_Product_Description"))
 				FkProductList=ReplaceTag(FkProductList,"{$ProductListContent$}",Rs("Fk_Product_Content"))
 				If Rs("Fk_Product_Url")<>"" Then
-					FkProductList=ReplaceTag(FkProductList,"{$ProductListUrl$}",Rs("Fk_Product_Url"))
+					ori=Rs("Fk_Product_Url")
+					if City <>"" Then
+						ori= "/?"& City & "/" & Split(ori,"?")(1)
+					End If
+					FkProductList=ReplaceTag(FkProductList,"{$ProductListUrl$}",ori)
 				Else
-					FkProductList=ReplaceTag(FkProductList,"{$ProductListUrl$}",GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Product_Id"),Rs("Fk_Product_FileName")))
+					
+					ori=GetContentUrl(GetModuleUrl(Rs("Fk_Module_MUrl"),Rs("Fk_Module_Type"),Rs("Fk_Module_Id")),Rs("Fk_Product_Id"),Rs("Fk_Product_FileName"))
+					if City <>"" Then
+						ori= "/?"& City & "/" & Split(ori,"?")(1)
+					End If
+					FkProductList=ReplaceTag(FkProductList,"{$ProductListUrl$}",ori)
+					
 				End If
 				FkProductList=ReplaceTag(FkProductList,"{$ProductListPic$}",Rs("Fk_Product_Pic"))
 				FkProductList=ReplaceTag(FkProductList,"{$ProductListPicBig$}",Rs("Fk_Product_PicBig"))
