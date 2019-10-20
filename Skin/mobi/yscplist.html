@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title>{$ModuleName$}--{$SiteName$}</title>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=viewport content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<META name=viewport content=initial-scale=1.0,user-scalable=no,maximum-scale=1 media="(device-height: 568px)">
+<META name=apple-mobile-web-app-capable content=yes>
+<META name=apple-mobile-web-app-status-bar-style content=black>
+<META name=format-detection content=telephone=no>
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/skins.css">
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/index.css">
+<LINK rel=stylesheet type=text/css  href="{$SiteSkin$}img/common.css">
+<META name=GENERATOR content="MSHTML 8.00.7601.18392">
+</HEAD>
+<BODY>
+{$File(top)$}
+<div class="second_nav">首页{$PageCrumbs$}</div>
+<div style="font-size:18PX; font-weight:bolder; text-align:center">{$ModuleName$}</div>
+<div class="blank10"></div>
+<div style="margin-bottom:20px;" id="tabcontent1">
+<div class="case_show">
+<div class="prolist">
+<ul>
+{$For(ProductList,1/{$ModuleId$}/0/12/1/0/0/0/0)$}
+<li><a href="{$ProductListUrl$}"><img height="441" border="0" align="middle" onload="(this.height=parseInt(this.width/3*2))" style="width:98%;" alt="{$ProductListTitle$}" src="{$ProductListPic$}" class="loaded"></a>
+<h3 style="text-align:center;"><a href="{$ProductListUrl$}">{$ProductListTitle$}</a></h3>
+</li>
+{$Next$}
+</ul>
+</div>
+<div style="width:100%; text-align:center">{$ModulePageCode(0)$}</div>
+</div>
+<!--End Tabcontent 1-->
+</div>
+<div class="blank20"></div>
+<!--底部开始-->
+{$File(bottom)$}
+</BODY>
+</HTML>

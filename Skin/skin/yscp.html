@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD >
+<META 
+content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title>{$ProductTitle$}-{$SiteName$}</title>
+<meta name="keywords" content="{$ProductKeyword$}">
+<meta name="description" content="{$ProductDescription$}">
+<META content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<LINK  rel=stylesheet type=text/css href="{$SiteSkin$}img/style.css" />
+<LINK  rel=stylesheet type=text/css href="{$SiteSkin$}img/resetcommonindex.css" />
+<SCRIPT type=text/javascript src="{$SiteSkin$}img/NSW_Index.js"></SCRIPT>
+</HEAD>
+<BODY>
+{$File(top)$}
+<div class="content"> {$File(left)$}
+<div class="right">
+<div class="righttop"> </div>
+
+
+
+<div class="pro_main">
+         <div id="printableview">
+           <div class="pro_curmbs"><span>当前位置：</span>首页{$PageCrumbs$}</div>
+            <div class="clear"></div>
+                          <div id="detailvalue0" class="proinfo ">
+                
+<style type="text/css">
+
+.content-width {MARGIN: auto;}
+
+.content-width img{MAX-WIDTH: 100%!important;HEIGHT: auto!important;width:expression(this.width > 700 ? "700px" : this.width)!important;border:1px solid #e3e3e3;padding:5px;margin-bottom:10px}
+
+</style>
+<div class="content-width">
+<h1 style="width:700px; margin:10px auto; text-align:center; font-size:16px; border-bottom:1px dashed #cccccc">{$ProductTitle$}</h1>
+
+<div class="info_con_tit">
+                    <div class="info_con_tit">
+                        <div class="n_tit">
+                            <span>关键词：{$ProductTitle$},{$ProductTitle$}厂家,{$ProductTitle$}价格</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                  {$ProductContent$}
+                  
+                  
+                  
+                  <div id="gduo" class="gduo">
+                    <span>下一篇：<a href="{$ProductNextUrl$}" title="{$ProductNextTitle$}">{$ProductNextTitle$}</a></span>上一篇：<a href="{$ProductPrevUrl$}" title="{$ProductPrevTitle$}">{$ProductPrevTitle$}</a>
+                </div>
+                
+                
+              </div></div>
+              <div class="clear"></div>
+              
+              <!--配套产品-->
+         </div>
+         <div class="clear"></div>
+       
+            <div class="cp">
+            
+            <div class="cptab">
+                    <a target_id="divRelevantViewedCntr" class="cr" >热门网格布产品</a>
+					<div class="clear"></div>
+				</div>
+            
+            
+              <div id="cntrRelevantProd">
+				    <div id="divRelevantViewedCntr">
+                    
+                    {$For(ProductList,1/4/2/3/0/0/0/0/0)$}
+                    <dl><dt><a title="{$ProductListTitle$}" target="_blank" href="{$ProductListUrl$}"><img title="{$ProductListTitle$}" alt="{$ProductListTitle$}" src="{$ProductListPic$}"></a></dt><dd class="t1"><a title="{$ProductListTitle$}" target="_blank" href="{$ProductListUrl$}">{$ProductListTitle$}</a></dd><dd class="d1"></dd></dl>
+                    
+                    
+                   {$Next$}</div>
+				    
+				</div>
+				<div class="clear"></div>
+			</div>
+            
+
+        </div>
+
+<script type="text/javascript" src="{$SiteDir$}Click.asp?Type=2&Id={$ProductId$}"></script>
+
+
+<div class="rightbot"> </div>
+<div class="clear"></div>
+{$File(gyxx)$}
+<div class="rightbot"> </div>
+</div>
+<div class="clear"> </div>
+<div id="mailArticle"> </div>
+</div>
+{$File(bot)$}
+<!-- 返回顶部 -->
+</BODY>
+</HTML>

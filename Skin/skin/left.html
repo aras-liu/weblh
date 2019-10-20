@@ -1,0 +1,41 @@
+﻿<div class="left">
+<div class="prolist fl">
+<div class="list_c0">
+<div class="list_c">
+  <h4><a href="/Product70/">按名称分类</a></h4>
+<ul class="u_lst1 f_cb">
+{$For(ProductList,1/4/0/0/0/0/0/0/0)$}
+<li><a title="{$ProductListTitle$}" href="{$ProductListUrl$}">{$ProductListTitle$}</a></li>
+{$Next$}
+</ul>
+
+
+
+
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="anli">
+<div class="tjal">热门产品</div>
+<div class="t05_copy">
+<ul class="t05_con_dl clearfix">
+{$For(ProductList,1/4/2/8/0/0/0/0/1)$}
+<li> <a target="_blank" title="{$ProductListTitle$}" href="{$ProductListUrl$}"> <img width="88" height="60" title="{$ProductListTitle$}" alt="{$ProductListTitle$}" src="{$ProductListPic$}" class="loadimg"></a>
+<p><a target="_blank" title="{$ProductListTitle$}" href="{$ProductListUrl$}">{$ProductListTitle$}</a></p>
+</li>
+{$Next$}
+<div class="clear"></div>
+</ul>
+</div>
+</div>
+<div class="leib2 mt10">
+<div class="tit"> 联系我们</div>
+<div class="leftlx">
+<div class="dianh" style="line-height:30px;"> {$Info(5)$}
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="leftbot"></div>
+</div>

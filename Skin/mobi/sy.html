@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title>{$SiteName$}</title>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=viewport content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<META name=viewport content=initial-scale=1.0,user-scalable=no,maximum-scale=1 media="(device-height: 568px)">
+<META name=apple-mobile-web-app-capable content=yes>
+<META name=apple-mobile-web-app-status-bar-style content=black>
+<META name=format-detection content=telephone=no>
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/skins.css">
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/index.css">
+<LINK rel=stylesheet type=text/css  href="{$SiteSkin$}img/common.css">
+<META name=GENERATOR content="MSHTML 8.00.7601.18392">
+
+
+
+</HEAD>
+<BODY>
+{$File(top)$}
+
+
+<!--导航-->
+
+
+
+
+
+<div class="blank10"></div>
+ <div class="tta"><font style="float:left; display:block; width:80%;"><a href="{$SiteUrl$}?Product/" style="color:#FFF; font-size:16px;">产品展示</a></font><span style="float:right; font-size:12px;"><a href="{$SiteUrl$}?Product/" style="color:#FFF;text-shadow:none;">更多 »</a></span></div>
+ 
+<div class="prolist">
+<ul>
+{$For(ProductList,1/4/0/8/0/0/0/10/0)$}
+<li><a href="{$ProductListUrl$}"><img height="441" border="0" align="middle" onload="(this.height=parseInt(this.width/3*2))" style="width:98%;" alt="{$ProductListTitle$}" src="{$ProductListPic$}" class="loaded"></a>
+<h3 style="text-align:center;"><a href="{$ProductListUrl$}" style="line-height:30px">{$ProductListTitle$}</a></h3>
+</li>
+{$Next$}
+</ul>
+
+
+</div>
+
+
+<div class="blank10"></div>
+ <div class="tta"><font style="float:left; display:block; width:80%;"><a href="{$SiteUrl$}?Product43/" style="color:#FFF; font-size:16px;">成功案例</a></font><span style="float:right; font-size:12px;"><a href="{$SiteUrl$}?Product43/" style="color:#FFF;text-shadow:none;">更多 »</a></span></div>
+ 
+<div class="prolist">
+<ul>
+{$For(ProductList,1/43/0/4/0/0/0/10/0)$}
+<li><a href="{$ProductListUrl$}"><img height="441" border="0" align="middle" onload="(this.height=parseInt(this.width/3*2))" style="width:98%;" alt="{$ProductListTitle$}" src="{$ProductListPic$}" class="loaded"></a>
+<h3 style="text-align:center;"><a href="{$ProductListUrl$}" style="line-height:30px">{$ProductListTitle$}</a></h3>
+</li>
+{$Next$}
+</ul>
+</div>
+
+
+
+
+
+<div class="blank10"></div>
+<div class="main">
+<!--Start of the Tabmenu 2 -->
+<div class="tta"><font style="float:left; display:block; width:80%;"><a href="{$SiteUrl$}?About.html" style="color:#FFF; font-size:16px;">关于我们</a></font><span style="float:right; font-size:12px;"><a href="?About.html" style="color:#FFF;text-shadow:none;">更多 »</a></span></div>
+<!--End of the Tabmenu 2 -->
+
+
+
+
+<!--Start Tabcontent 2-->
+<div style="line-height:24px; text-align:left; text-indent:24px; padding:10px">
+{$Info(1)$}
+</div>
+<!--End Tabcontent 2 -->
+</div>
+<div class="blank20"></div>
+
+
+
+<div class="blank5"></div>
+
+<div class="newsliebiao">
+<div class="tta"><font style="float:left; display:block; width:80%;"><a href="{$SiteUrl$}?News/" style="color:#FFF; font-size:16px;">最新动态</a></font><span style="float:right; font-size:12px;"><a href="{$SiteUrl$}?News/" style="color:#FFF;text-shadow:none;">更多 »</a></span></div>
+<div class="blank5"></div>
+<div class="newlists">
+	<ul>
+        
+{$For(ArticleList,1/0/0/6/0/0/0/20/0)$}
+  
+    <li><a href="{$ArticleListUrl$}" title="{$ArticleListTitle$}"><span>[{$ArticleListTime(yyyy-mm-dd)$}]</span>{$ArticleListTitle$}</a></li>
+        {$Next$}
+                    
+    </ul>
+</div>
+</div>
+
+<div class="blank30"></div>
+
+
+
+<!--底部开始-->
+{$File(bottom)$}
+</BODY>
+</HTML>

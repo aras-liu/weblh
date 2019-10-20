@@ -1,0 +1,11 @@
+﻿<div class="RandomNews">
+<h4 class="diysr"> 推荐资讯</h4>
+<div class="news_random">
+<ul>
+{$For(ArticleList,1/0/0/20/0/0/0/20/0)$}
+<li><span class="fr"> {$ArticleListTime(yyyy-mm-dd)$}</span><a title="{$ArticleListTitle$}" href="{$ArticleListUrl$}" target="_blank">{$ArticleListTitle$}</a></li>
+{$Next$}
+<div class="clear"> </div>
+</ul>
+</div>
+</div>

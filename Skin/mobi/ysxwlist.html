@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title>{$ModuleName$}--{$SiteName$}</title>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=viewport content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<META name=viewport content=initial-scale=1.0,user-scalable=no,maximum-scale=1 media="(device-height: 568px)">
+<META name=apple-mobile-web-app-capable content=yes>
+<META name=apple-mobile-web-app-status-bar-style content=black>
+<META name=format-detection content=telephone=no>
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/skins.css">
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/index.css">
+<LINK rel=stylesheet type=text/css  href="{$SiteSkin$}img/common.css">
+<META name=GENERATOR content="MSHTML 8.00.7601.18392">
+</HEAD>
+<BODY>
+{$File(top)$}
+<div class="second_nav">首页{$PageCrumbs$}</div>
+<div style="font-size:18PX; font-weight:bolder; text-align:center">{$ModuleName$}</div>
+<div class="blank10"></div>
+<div class="newsliebiao">
+<div class="newlists">
+<ul>
+{$For(ArticleList,1/{$ModuleId$}/0/6/0/0/0/16/0)$}
+<li><a title="{$ArticleListTitle$}" href="{$ArticleListUrl$}"><span>[{$ArticleListTime(yyyy-mm-dd)$}]</span>{$ArticleListTitle$}</a></li>
+{$Next$}
+</ul>
+</div>
+</div>
+<div style="width:100%; float:left; margin-bottom:22px; text-align:center"> {$ModulePageCode(0)$} </div>
+<div class="blank20"></div>
+<!--底部开始-->
+{$File(bottom)$}
+</BODY>
+</HTML>

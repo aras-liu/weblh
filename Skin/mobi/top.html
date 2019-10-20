@@ -1,0 +1,34 @@
+﻿<DIV class=wrap>
+<HEADER class=g-hd><A class=m-logo target="a"  href="{$SiteUrl$}" name=logo><IMG class=loaded src="{$SiteSkin$}img/blogo.png"> </A>
+<P class=m-tel><SPAN style="FONT-SIZE: 14px; FONT-WEIGHT: bold" 
+class=u-text>24小时产品咨询服务热线</SPAN> <I class=u-tel><EM class="z-ln-1 s-ln-1"></EM><EM  class="z-ln-2 s-ln-2"></EM></I><A style="FONT-SIZE: 15px; FONT-WEIGHT: bold"  class="u-num s-num" href="tel:{$Site_Field_mobile$}">{$Site_Field_mobile$}</A><BR>
+</P>
+</HEADER>
+<!--广告滚动1-->
+
+<nav class="g-nav">
+<UL>
+<!--导航-->
+
+{$For(Nav,1/0/1/0)$}
+<LI><A style="COLOR: #fff" href="{$NavUrl$}">{$NavName$}</A> </LI>
+{$Next$}
+<!--导航结束-->
+</UL>
+</DIV>
+<div style="clear:both"></div>  
+     
+<!--广告滚动1-->
+<div class="g-adv j-slide-auto">
+        <div class="sclwrap_box" style="position: relative; overflow: hidden; visibility: visible; list-style: none; "><div class="sclwrap_box" style="position: relative; overflow: hidden; visibility: visible; list-style: none outside none;"><ul class="m-box" id="slides_control_id0" style="position: relative; overflow: hidden; width: 4050px; left: -2700px; transition: left 400ms ease 0s;">
+        {$For(ProductList,1/42/0/0/0/0/0/0/0)$}
+                    <li style="float: left; display: block; width: 1350px;"><a href="#" title="{$ProductListTitle$}">
+                        <img src="{$ProductListPic$}" data-src="{$ProductListPic$}" title="{$ProductListTitle$}" alt="{$ProductListTitle$}" style="height:auto;" class="loaded"></a></li>{$Next$}
+        </ul></div></div>
+    <ul class="m-cnt" id="pager_id0">
+                <li class=""></li>
+                <li class=""></li>
+                <li class="z-on"></li> 
+    </ul>
+</div>
+

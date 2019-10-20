@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title>{$ArticleTitle$}--{$SiteName$}</title>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=viewport content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<META name=viewport content=initial-scale=1.0,user-scalable=no,maximum-scale=1 media="(device-height: 568px)">
+<META name=apple-mobile-web-app-capable content=yes>
+<META name=apple-mobile-web-app-status-bar-style content=black>
+<META name=format-detection content=telephone=no>
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/skins.css">
+<LINK rel=stylesheet type=text/css href="{$SiteSkin$}img/index.css">
+<LINK rel=stylesheet type=text/css  href="{$SiteSkin$}img/common.css">
+<META name=GENERATOR content="MSHTML 8.00.7601.18392">
+</HEAD>
+<BODY>
+{$File(top)$}
+<div class="second_nav">首页{$PageCrumbs$}</div>
+<div style="font-size:18PX; font-weight:bolder; text-align:center">{$ArticleTitle$}</div>
+<div style="color:#999; font-size:12px; text-align:center; height:32px; line-height:32px; border-bottom:1px solid #ccc">日期：{$ArticleTime(yyyy-mm-dd)$} | 人气：{$ArticleClick$}</div>
+<div class="blank10"></div>
+<div class="aliness" style="padding:0 2% 0 2%; line-height:26px;font-size:14px;"> {$ArticleContent$} </div>
+<div style="line-height:23px;text-align:left;font-size:14px;">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="80" valign="top">&nbsp;<img style="width:16px; height:16px;" src="{$SiteSkin$}img/y_jt.png" class="loaded">下一篇：</td>
+<td valign="top"><a style="color:#333333;text-decoration:underline" target="_blank" href="{$ArticleNextUrl$}">{$ArticleNextTitle$}</a>&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">&nbsp;<img style="width:16px; height:16px;" src="{$SiteSkin$}img/z_jt.png" class="loaded">上一篇：</td>
+<td valign="top"><a style="color:#333333;text-decoration:underline"  href="{$ArticlePrevUrl$}"> {$ArticlePrevTitle$}</a> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="blank20"></div>
+<script type="text/javascript" src="{$SiteDir$}Click.asp?Type=1&Id={$ArticleId$}"></script>
+<!--底部开始-->
+{$File(bottom)$}
+</BODY>
+</HTML>

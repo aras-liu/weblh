@@ -1,0 +1,108 @@
+@charset "utf-8";
+/*
+方卡在线 版权所有
+http://www.fangka.net/
+*/
+/* Base */
+* {margin:0;padding:0;}
+body,td,th {font-size:12px;}
+body {margin-left:0px;margin-top:0px;margin-right:0px;margin-bottom:0px;}
+a {font-size:12px;color:#000;text-decoration:none;}
+a:visited {color:#000;text-decoration:none;}
+a:hover {color:#000;text-decoration:none;}
+a:active {color:#000;text-decoration:none;}
+img {border:none;}
+table {border-collapse:collapse;}
+ul {list-style:none;}
+.Cal {clear:both;}
+.Button {width:60px;height:25px;background:url(../Images/BgLine.png) 0 -120px;text-align:center;line-height:25px;border:1px solid #87A3C1;color:#1163AC;font-weight:bold;}
+.Button2 {border:1px solid #999;border-bottom:1px solid #CCC;border-right:1px solid #CCC;height:22px;line-height:18px;}
+.Input {border:1px solid #8AA3BE;background-color:#FFFFCC;height:20px;line-height:20px;}
+.TextArea {border:1px solid #8AA3BE;background:#FFFFCC;line-height:20px;}
+.Input150 {width:150px;}
+.upButton {margin:0;border:1px;border-color:#fff #888 #888 #fff;background:#F0F0F0;cursor:pointer;font-size:13px;}
+.fleft {float:left;}
+#simpleTooltip {padding:5px;width:180px;line-height:20px;border:1px solid #A6A7AB;background:#F2F3F5;}
+#simpleTooltip p {text-indent:24px;}
+/* Base */
+
+/* Page */
+#PageTop {background:url(../Images/BgLine.png);}
+#PageTop {height:80px;padding-top:10px;}
+#Top {height:32px;margin-left:10px;}
+#Logo {width:136px;height:32px;float:left;}
+#UserInfo {margin-left:50px;line-height:25px;float:left;color:#333;font-weight:bold;}
+#UserInfo a {font-weight:normal;color:#0068B7;text-decoration:underline;}
+#Nav {height:38px;margin-top:10px;}
+#Nav li {float:left;width:91px;height:38px;margin-left:10px;font-size:14px;font-weight:bold;text-align:center;line-height:38px;cursor:pointer;}
+.NavNow {color:#FFF;background:url(../Images/BgImg.png) 0 -80px;}
+.NavOther {color:#4B6888;}
+#MainLeft {width:188px;border-right:1px solid #9DB3C5;float:left;background:#F6F9FD;}
+#MainRight {width:812px;float:left;}
+#QuickNav {width:100%;height:38px;background:url(../Images/BgImg.png);}
+#QuickNav a {height:38px;display:block;float:left;}
+#QuickNav1:link,#QuickNav1:visited {width:90px;}
+#QuickNav1:hover,#QuickNav1:active {background:url(../Images/BgImg.png) 0 -38px;width:90px;}
+#QuickNav2:link,#QuickNav2:visited {width:97px;}
+#QuickNav2:hover,#QuickNav2:active {background:url(../Images/BgImg.png) -90px -38px;width:97px;}
+#MenuAll {padding:5px;padding-bottom:0;text-align:center;}
+.LeftMenuTop {width:168px;height:20px;padding-top:10px;margin:0 auto;margin-top:10px;margin-bottom:5px;background:url(../Images/BgImg.png) -190px 0;text-indent:24px;cursor:pointer;}
+#MainLeft ul {margin-left:10px;}
+#MainLeft li {line-height:24px;text-indent:18px;margin-top:3px;}
+#MainLeft li span {background:url(../Images/BgImg.png) -370px -10px;font-family:'宋体',Simsun;}
+#MainLeft li a:hover {width:167px;height:24px;display:block;background:url(../Images/BgImg.png) -190px -30px;}
+#MainRrightTop {padding-top:12px;background-color:#E6F6FF;border-bottom:1px solid #D2EEFB;text-indent:24px;line-height:25px;}
+#NewBox {width:460px;margin:10px;float:left;}
+#NewBoxTop {width:100%;height:28px;background:url(../Images/BgImg.png) 0 -120px;}
+#NewBoxTop li {width:118px;height:28px;line-height:28px;text-align:center;background:url(../Images/BgImg.png) -95px -80px;}
+#NewContent {width:458px;border:1px solid #A4B2BD;border-top:none;height:220px;}
+#Ad {width:300px;height:247px;margin:10px;float:left;border:1px solid #CCC;}
+#AboutSystem {width:448px;border:1px solid #A4B2BD;margin:10px;float:left;line-height:20px;padding:5px;background-color:#F6F9FD;color:#0068B7;}
+#AboutAd {width:290px;border:1px solid #A4B2BD;margin:10px;float:left;line-height:20px;padding:5px;background-color:#F6F9FD;color:#0068B7;}
+#AboutSystem a,#AboutAd a {color:#0068B7;}
+.orderinput {width:40px;border:1px solid #CCC;height:18px;line-height:18px;text-align:center;}
+.orderbtn {border:1px solid #CCC;border-left:none;height:20px;line-height:20px;}
+#ListNav {width:100%;background:url(../Images/BgLine.png) 0 -195px;height:32px;padding-top:7px;}
+#ListNav ul {margin-left:30px;}
+#ListNav li {float:left;}
+#ListNav li a {width:100px;height:26px;display:block;text-align:center;line-height:26px;}
+#ListNav li a:hover {background-image:url(../Images/BgImg.png);background-position:-220px -80px;}
+#ListTop {width:100%;background-color:#F5F6F6;font-size:14px;line-height:30px;text-indent:24px;font-weight:bold;}
+#ListContent {width:100%;}
+.ListTdTop {height:19px;background:url(../Images/BgLine.png) 0 -235px;}
+#ListBottom {width:100%;background:url(../Images/BgLine.png) 0 -255px;height:37px;}
+/* Page */
+
+/* Box */
+#Boxs {position:absolute;left:0;top:0;z-index:99;width:100%;height:100%;}
+#AlphaBox {position:absolute;left:0;top:0;z-index:100;width:100%;height:100%;background:#000;filter:alpha(opacity=30);opacity:0.3;-moz-opacity:0.3;}
+#BoxContent {position:absolute;left:0;top:0;z-index:101;width:100%;margin-bottom:50px;}
+#LoadBox {width:300px;margin:0 auto;margin-top:100px;}
+#BoxTop {width:500px;margin:0 auto;margin-top:50px;height:25px;line-height:25px;background:url(../Images/BgLine.png) 0 -90px;border:1px solid #385B79;border-top:none;font-weight:bold;color:#FFF;text-indent:24px;}
+#BoxContents {width:500px;margin:0 auto;background-color:#FFF;padding-top:10px;padding-bottom:10px;border-left:1px solid #7998B7;border-right:1px solid #7998B7;border-bottom:1px solid #D7E0E7;line-height:20px;}
+#BoxContents p {margin-top:3px;}
+#BoxContents table { margin:0 auto;}
+#BoxBottom {width:480px;margin:0 auto;border:1px solid #7998B7;background-color:#EDF3FC;border-top:none;height:50px;line-height:50px;text-align:right;padding-right:20px;}
+#MsgBox {position:absolute;left:0;top:0;z-index:102;width:100%;text-align:center;display:none;}
+#MsgContent {width:166px;margin:0 auto;line-height:33px;background:url(../Images/Msg.gif);margin-top:40px;color:#0068B7;padding-left:36px;font-weight:bold;}
+#errBox {width:500px;margin:0 auto;border:1px solid #CCC;margin-top:50px;background:#FFF;}
+#errTitle {border-bottom:1px solid #CCC;line-height:25px;text-align:center;}
+#errStr {padding:10px;line-height:22px;text-indent:24px;}
+.BoxNav {padding-left:30px;padding-bottom:3px;}
+.BoxNav li {float:left;line-height:22px;border:1px solid #CCC;margin-left:10px;padding-left:10px;padding-right:10px;cursor:pointer;}
+.BoxNav li.check {background:#666;color:#FFF;}
+.qbox {cursor:help;}
+.qbox2 {cursor:pointer;}
+.gModel {margin:5px;margin-top:0;padding:3px;border:1px solid #999;}
+ul.triState {padding:10px;}
+ul.triState li {clear:both;line-height:20px;}
+ul.triState a.checkbox {background:url(../Images/3-state-checkbox.gif) no-repeat;display:block;float:left;height:13px;overflow:hidden;width:13px;text-indent:-999px; margin-top:5px; margin-right:5px;}
+	ul.triState ul li a.checkbox {margin-left:2px; _margin-left:3px;}
+	ul.triState a.checked {background-position:0 -13px; }
+	ul.triState a.partial {background-position:0 -26px; }
+	ul.triState li li {padding-left:18px;}
+.picList {border:1px solid #999;float:left;padding:3px;margin:3px;text-align:center;line-height:20px;cursor:pointer;}
+.picCheck {border:2px solid #F60;}
+/* Box */
+
+

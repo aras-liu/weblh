@@ -1,0 +1,647 @@
+﻿@charset "utf-8";
+BODY {
+	BACKGROUND: #f9f9f9; COLOR: #666
+}
+A {
+	COLOR: #666
+}
+A:link {
+	COLOR: #666;
+}
+A:visited {
+	COLOR: #666
+}
+A:hover {
+	COLOR: #a90000
+}
+A:active {
+	COLOR: #4d7aa8
+}
+.s-cyan2 {
+	COLOR: cyan
+}
+.green {
+	COLOR: #390
+}
+.cyan {
+	COLOR: #b3221f
+}
+.g-back {
+	BACKGROUND: #e8e8e8; BORDER-TOP: #e8e8e8 1px solid
+}
+.max_bg DIV {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #bcbcbc; BORDER-RIGHT-STYLE: solid; BACKGROUND-COLOR: #fff; BORDER-TOP-COLOR: #bcbcbc; BORDER-TOP-STYLE: solid; COLOR: #303f4c; BORDER-RIGHT-COLOR: #bcbcbc; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #bcbcbc
+}
+.m-tit {
+	BORDER-BOTTOM: #dfdfdf 3px solid; BACKGROUND: #051a0f
+}
+.m-tit .u-ico:before {
+	BACKGROUND: #652c7f
+}
+.m-tit .u-ico:after {
+	BACKGROUND: #eedcf7
+}
+.m-tel {
+	COLOR: #f50000
+}
+.m-tel .s-num {
+	COLOR: #f50000
+}
+.m-tel {
+	COLOR: #f5821f
+}
+.m-tel .u-text {
+	COLOR: #f5821f
+}
+.u-tel .s-ln-1 {
+	BORDER-BOTTOM: #565656 2px solid; BORDER-LEFT: #565656 2px solid; BORDER-TOP: #565656 2px solid; BORDER-RIGHT: #565656 2px solid
+}
+.u-tel .s-ln-2 {
+	BORDER-BOTTOM: #565656 2px solid; BORDER-LEFT: #565656 2px solid; BORDER-TOP: #565656 2px solid; BORDER-RIGHT: #565656 2px solid
+}
+.u-tel .s-ln-3 {
+	BORDER-BOTTOM: #565656 2px solid; BORDER-LEFT: #565656 2px solid; BORDER-TOP: #565656 2px solid; BORDER-RIGHT: #565656 2px solid
+}
+.g-se:before {
+	BORDER-BOTTOM: #fff 3px solid; BORDER-LEFT: #fff 3px solid; BORDER-TOP: #fff 3px solid; BORDER-RIGHT: #fff 3px solid
+}
+.g-se .u-in {
+	BACKGROUND: 0px 0px
+}
+.g-se:after {
+	BACKGROUND: #fff
+}
+.g-mnav .m-cnt LI.z-on {
+	COLOR: #541474
+}
+.g-adv .m-cnt {
+	BACKGROUND: #333
+}
+.g-adv .m-cnt LI {
+	
+}
+.g-adv .m-cnt .z-on {
+	BACKGROUND: #f4821f
+}
+.g-prn .m-con P {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-TOP: #e6e6e6 1px solid
+}
+.g-sbox .m-con .u-lifo {
+	BORDER-BOTTOM: #fff 1px solid; MARGIN-BOTTOM: 2px; box-shadow: 0 1px #e6e6e6
+}
+.g-sbox .m-con .u-lifo P {
+	COLOR: #a1a1a1
+}
+.g-sbox .m-con .u-lifo IMG {
+	BORDER-BOTTOM: #e1e1e1 1px solid; BORDER-LEFT: #e1e1e1 1px solid; BORDER-TOP: #e1e1e1 1px solid; BORDER-RIGHT: #e1e1e1 1px solid
+}
+.g-sbox .z-spe.m-con A {
+	BORDER-BOTTOM: #e6e6e6 1px solid
+}
+.g-bd .m-con-3 LI {
+	BORDER-BOTTOM: #e6e6e6 1px solid
+}
+.qabox .qacont .list A {
+	BORDER-BOTTOM: #e6e6e6 1px solid
+}
+.m-about .list A {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-TOP: #e6e6e6 1px solid
+}
+.m-about P {
+	BORDER-BOTTOM: #e6e6e6 1px solid
+}
+UNKNOWN {
+	BACKGROUND: #fff
+}
+UNKNOWN {
+	BACKGROUND: #fafafa
+}
+.s-tbg {
+	COLOR: #051a0f
+}
+.u-top {
+	BORDER-BOTTOM: #3a3a3a 1px solid; BACKGROUND: #252728
+}
+.u-top:after {
+	POSITION: absolute; WIDTH: 100%; BOTTOM: 0px; BACKGROUND: #000; HEIGHT: 1px; CONTENT: ''; LEFT: 0px
+}
+.g-ft {
+	BACKGROUND-COLOR: #edeeed
+}
+.m-bmu {
+	BACKGROUND: #252728
+}
+.g-bd .m-pronav .list .white {
+	BACKGROUND: #fff
+}
+.g-bd .m-pronav .list .gray {
+	BACKGROUND: #f8f8f8
+}
+.g-bd .m-pronav .prolist {
+	BORDER-BOTTOM: #e1e1e1 1px solid; BORDER-LEFT: #e1e1e1 1px solid; BORDER-TOP: #e1e1e1 1px solid; BORDER-RIGHT: #e1e1e1 1px solid
+}
+.g-bd .m-pronav .prolist LI .on {
+	BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND-COLOR: #e1e1e1
+}
+.g-bd .m-pronav .prolist LI .down {
+	BORDER-BOTTOM: #e1e1e1 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.g-bd .m-pronav .prolist LI:unknown .down {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+.g-bd .m-pronav .prolist LI P {
+	BORDER-BOTTOM: #e1e1e1 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.g-bd .m-pronav .prolist LI UL A {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.g-bd .m-pronav .list1 LI {
+	BORDER-BOTTOM: #e1e1e1 1px solid
+}
+.g-bd .m-pronav .list1 LI:before {
+	BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: #ff8100; BORDER-RIGHT-COLOR: #ff8100; BORDER-LEFT-COLOR: transparent
+}
+.g-bd .m-pronav .list1 LI:after {
+	BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: #fff; BORDER-RIGHT-COLOR: #fff; BORDER-LEFT-COLOR: transparent
+}
+.g-bd .m-pronav .prolist .list1 .a_tit:before {
+	BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: #ff8100; BORDER-RIGHT-COLOR: #ff8100; BORDER-LEFT-COLOR: transparent
+}
+.g-bd .m-pronav .prolist .list1 .a_tit:after {
+	BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: #fff; BORDER-RIGHT-COLOR: #fff; BORDER-LEFT-COLOR: transparent
+}
+UNKNOWN {
+	BORDER-RIGHT: #ddd 1px dashed
+}
+UNKNOWN {
+	BORDER-RIGHT: #ddd 1px dashed
+}
+UNKNOWN {
+	BORDER-RIGHT: #ddd 1px dashed
+}
+.g-bd .prolist_img {
+	BORDER-BOTTOM: #dddddd 1px solid
+}
+.g-bd .prolist_img LI {
+	BORDER-BOTTOM: #dddddd 1px solid; BORDER-TOP: #fff 1px solid
+}
+.g-bd .prolist_img LI .tt_box {
+	BACKGROUND: #f9f9f9
+}
+.g-bd .prolist_img LI .tt_box H5 {
+	COLOR: #333333
+}
+.g-bd .prolist_img LI .tt_box P {
+	COLOR: #aaaaaa
+}
+.g-bd .prolist_img .hideen_box {
+	BACKGROUND: #505050
+}
+.g-bd .prolist_img .hideen_box:before {
+	BACKGROUND: #505050
+}
+.g-bd .prolist_img .hideen_box A {
+	COLOR: #fff
+}
+.m-help .m-con {
+	BORDER-BOTTOM: #e1e1e1 1px solid; BORDER-LEFT: #e1e1e1 1px solid; BORDER-TOP: #e1e1e1 1px solid; BORDER-RIGHT: #e1e1e1 1px solid
+}
+.m-help .m-con .helplist LI {
+	BORDER-BOTTOM: #eaeaea 1px solid; BACKGROUND-COLOR: #f7f7f7; BORDER-TOP: #fff 1px solid
+}
+.g-bd .m-con .helplist LI {
+	BORDER-BOTTOM: #eaeaea 1px solid; BACKGROUND-COLOR: #f7f7f7; BORDER-TOP: #fff 1px solid
+}
+.m-help .m-con .helplist LI A {
+	COLOR: #666
+}
+.m-com DL {
+	BORDER-BOTTOM: #d9d9d9 1px solid; BORDER-TOP: #fff 1px solid
+}
+.m-com .relay_time {
+	COLOR: #b2b2b2
+}
+.m-com .re_sec {
+	BACKGROUND: #e6e6e6
+}
+.m-com .re_sec .tit {
+	COLOR: #ff8100
+}
+.m-rec A {
+	COLOR: #ff8100
+}
+.m-cont .m-con .ptit {
+	COLOR: #ff8100; FONT-SIZE: 14px
+}
+.m-cont H2 {
+	COLOR: #ff8100
+}
+.line {
+	BORDER-BOTTOM: #e6e6e6 1px solid; BORDER-TOP: #fff 1px solid
+}
+.leave .name {
+	COLOR: #d6d6d6
+}
+.leave .ly {
+	COLOR: #d6d6d6
+}
+.joinuscon .ly {
+	COLOR: #d6d6d6
+}
+.joinuscon .name {
+	COLOR: #d6d6d6
+}
+.xgmmbox .name {
+	COLOR: #d6d6d6
+}
+.z-spe.name {
+	COLOR: #d6d6d6
+}
+.u-inna {
+	COLOR: #d6d6d6
+}
+.leave .name {
+	BORDER-BOTTOM: #d2d2d2 1px solid; BORDER-LEFT: #d2d2d2 1px solid; BACKGROUND-COLOR: #f8f8f8; BORDER-TOP: #d2d2d2 1px solid; BORDER-RIGHT: #d2d2d2 1px solid
+}
+.leave .ly {
+	BORDER-BOTTOM: #d2d2d2 1px solid; BORDER-LEFT: #d2d2d2 1px solid; BACKGROUND-COLOR: #f8f8f8; BORDER-TOP: #d2d2d2 1px solid; BORDER-RIGHT: #d2d2d2 1px solid
+}
+.joinuscon .ly {
+	BORDER-BOTTOM: #d2d2d2 1px solid; BORDER-LEFT: #d2d2d2 1px solid; BACKGROUND-COLOR: #f8f8f8; BORDER-TOP: #d2d2d2 1px solid; BORDER-RIGHT: #d2d2d2 1px solid
+}
+.joinuscon .name {
+	BORDER-BOTTOM: #d2d2d2 1px solid; BORDER-LEFT: #d2d2d2 1px solid; BACKGROUND-COLOR: #f8f8f8; BORDER-TOP: #d2d2d2 1px solid; BORDER-RIGHT: #d2d2d2 1px solid
+}
+.xgmmbox .name {
+	BORDER-BOTTOM: #d2d2d2 1px solid; BORDER-LEFT: #d2d2d2 1px solid; BACKGROUND-COLOR: #f8f8f8; BORDER-TOP: #d2d2d2 1px solid; BORDER-RIGHT: #d2d2d2 1px solid
+}
+.z-spe.name {
+	BORDER-BOTTOM: #d2d2d2 1px solid; BORDER-LEFT: #d2d2d2 1px solid; BACKGROUND-COLOR: #f8f8f8; BORDER-TOP: #d2d2d2 1px solid; BORDER-RIGHT: #d2d2d2 1px solid
+}
+.u-inna {
+	BORDER-BOTTOM: #d2d2d2 1px solid; BORDER-LEFT: #d2d2d2 1px solid; BACKGROUND-COLOR: #f8f8f8; BORDER-TOP: #d2d2d2 1px solid; BORDER-RIGHT: #d2d2d2 1px solid
+}
+.z-use.m-con-4 H4 {
+	COLOR: #122839
+}
+.z-use.m-con-4 H5 {
+	COLOR: #666666
+}
+.z-order.g-bd {
+	BACKGROUND: #fff
+}
+.z-reg.m-con-1 {
+	BACKGROUND: #fff
+}
+.m-ccon {
+	BACKGROUND: #fff
+}
+.xgmmbox {
+	BACKGROUND: #fff
+}
+.s-orbg {
+	BACKGROUND: #f1f1f1
+}
+.erro P.en {
+	COLOR: #666666; text-shadow: 0 0 3px #999999
+}
+.erro P A {
+	COLOR: #ff8100
+}
+.g-market {
+	BORDER-BOTTOM: #e6e6e6 1px solid; BORDER-LEFT: #e6e6e6 1px solid; BORDER-TOP: #e6e6e6 1px solid; BORDER-RIGHT: #e6e6e6 1px solid
+}
+.g-market H2 {
+	COLOR: #a90000
+}
+.g-market H3 {
+	BORDER-BOTTOM: #f0f0f0 3px solid; COLOR: #ccc
+}
+.g-market .marketwz {
+	COLOR: #fc7843
+}
+.g-market .sqbot {
+	BACKGROUND-COLOR: #ae1414; COLOR: #fff; box-shadow: 0 0 5px #999999; text-shadow: 1px 1px 1px #999; -moz-box-shadow: 0 0 5px #999999; -webkit-box-shadow: 0 0 5px #999999; -o-box-shadow: 0 0 5px #999999; -moz-text-shadow: 1px 1px 1px #999; -webkit-text-shadow: 1px 1px 1px #999; -o-text-shadow: 1px 1px 1px #999
+}
+.g-pintro .sqbot {
+	BACKGROUND-COLOR: #ae1414; COLOR: #fff; box-shadow: 0 0 5px #999999; text-shadow: 1px 1px 1px #999; -moz-box-shadow: 0 0 5px #999999; -webkit-box-shadow: 0 0 5px #999999; -o-box-shadow: 0 0 5px #999999; -moz-text-shadow: 1px 1px 1px #999; -webkit-text-shadow: 1px 1px 1px #999; -o-text-shadow: 1px 1px 1px #999
+}
+.g-pintro {
+	BORDER-BOTTOM: #e6e6e6 1px solid; BORDER-LEFT: #e6e6e6 1px solid; BORDER-TOP: #e6e6e6 1px solid; BORDER-RIGHT: #e6e6e6 1px solid
+}
+.g-pintro H2 {
+	COLOR: #a90000
+}
+.g-pintro I {
+	COLOR: #a90000
+}
+.g-pintro H3 {
+	BORDER-BOTTOM: #f0f0f0 3px solid; COLOR: #ccc
+}
+.g-pintro EM {
+	COLOR: #b2b2b2
+}
+.g-pintro .m-con P {
+	BORDER-BOTTOM: #c0c0c0 1px dotted
+}
+.Honor .m-box IMG {
+	BORDER-BOTTOM: #e2e2e2 1px solid; BORDER-LEFT: #e2e2e2 1px solid; BORDER-TOP: #e2e2e2 1px solid; BORDER-RIGHT: #e2e2e2 1px solid
+}
+.g-qabox .m-con .list {
+	BORDER-BOTTOM: #e6e6e6 1px solid
+}
+.g-sbox .m-con .list {
+	BORDER-BOTTOM: #e6e6e6 1px solid
+}
+.g-sbox .m-jmlc LI {
+	BORDER-BOTTOM: #777777 1px solid; BACKGROUND-COLOR: #b8b8b8; COLOR: #565656; text-shadow: 0 1px #fff
+}
+.g-sbox .m-cnt {
+	BORDER-BOTTOM: #bdbab7 1px solid; POSITION: relative; BACKGROUND: #dfdfdf
+}
+.g-sbox .m-cnt LI {
+	POSITION: relative
+}
+.g-sbox LI.z-on {
+	BACKGROUND: #f08300; COLOR: #ffffff; border-radius: 1px
+}
+.g-sbox LI.z-on:before {
+	
+}
+.g-sbox LI.z-on:after {
+	BORDER-BOTTOM: #ac50d7 4px solid
+}
+.nav DT {
+	BACKGROUND-COLOR: #eae9ea
+}
+.g-back .u-bp {
+	BACKGROUND: url(Nyskinsbar.png) no-repeat; background-size: 35px 600px
+}
+.g-back .u-bl {
+	BACKGROUND: url(Nyskinsbar.png) no-repeat; background-size: 35px 600px
+}
+.g-back .u-bh {
+	BACKGROUND: url(Nyskinsbar.png) no-repeat; background-size: 35px 600px
+}
+.u-seek {
+	BACKGROUND: url(Nyskinsbar.png) no-repeat; background-size: 35px 600px
+}
+.u-detail {
+	BACKGROUND: url(Nyskinsbar.png) no-repeat; background-size: 35px 600px
+}
+.s-wc {
+	COLOR: #ff8100
+}
+A.s-wc {
+	COLOR: #ff8100
+}
+.g-bd .m-pronav .list1 A {
+	COLOR: #ff8100
+}
+.g-bd .m-pronav .list2 A {
+	COLOR: #ff8100
+}
+.g-bd .m-pronav .list3 A {
+	COLOR: #ff8100
+}
+.m-pronav .content A {
+	COLOR: #ff8100
+}
+.u-pnum {
+	COLOR: #ff8100
+}
+.g-bd .m-pronav .prolist .list1 .a_tit {
+	COLOR: #ff8100
+}
+.s-wc-2 {
+	COLOR: #ff8100
+}
+A.s-wc-2 {
+	COLOR: #ff8100
+}
+.s-wc-3 {
+	COLOR: #3372a2
+}
+A.s-wc-3 {
+	COLOR: #3372a2
+}
+.z-spw {
+	COLOR: #ff6700
+}
+.g-page A {
+	BACKGROUND-COLOR: #ff8100; COLOR: #fff
+}
+.g-page .z-noc {
+	BACKGROUND-COLOR: #e8e8e8; COLOR: #9b0e0e
+}
+.g-page .u-sa {
+	BACKGROUND: #ff8f00; COLOR: #fff
+}
+.u-co-bt {
+	BACKGROUND-COLOR: #ff9919; COLOR: #fff
+}
+.s-hd {
+	
+}
+A:hover {
+	COLOR: #f08300
+}
+.z-spe.m-tit {
+	BORDER-BOTTOM: #a9a9a9 1px solid
+}
+.m-tit {
+	BACKGROUND: #dfdfdf 0px 0px; COLOR: #051a0f
+}
+.g-se .u-bt {
+	BACKGROUND-COLOR: #3e3c3d
+}
+.u-key {
+	BORDER-BOTTOM: #4b494a 1px solid; BORDER-LEFT: #4b494a 1px solid; COLOR: #d0d0d0; BORDER-TOP: #4b494a 1px solid; BORDER-RIGHT: #4b494a 1px solid; box-shadow: 3px 2px 3px #ccc inset
+}
+.z-spe.m-tit .xg {
+	COLOR: #000000
+}
+.m-con-1 .havlog {
+	COLOR: #ff8100
+}
+.m-con-1 .forget {
+	COLOR: #d42626
+}
+.m-con-1 .welcome {
+	COLOR: #a90000
+}
+.g-bd .m-con-1 A {
+	COLOR: #ff8100
+}
+.img-iphone {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: telshow;
+    animation-timing-function: linear;
+    display: inline-block;
+    max-height: 25px;
+    max-width: 25px;
+    vertical-align: middle;
+}
+.img-baidu {
+	DISPLAY: inline-block; MAX-WIDTH: 25px; MAX-HEIGHT: 25px; VERTICAL-ALIGN: middle
+}
+.img-weixin {
+	DISPLAY: inline-block; MAX-WIDTH: 30px; MAX-HEIGHT: 25px; VERTICAL-ALIGN: middle
+}
+.img-share {
+	DISPLAY: inline-block; MAX-WIDTH: 25px; MAX-HEIGHT: 25px; VERTICAL-ALIGN: middle
+}
+.img-map {
+	DISPLAY: inline-block; MAX-WIDTH: 25px; MAX-HEIGHT: 25px; VERTICAL-ALIGN: middle
+}
+.img-aiser {
+	DISPLAY: inline-block; MAX-WIDTH: 15px; MAX-HEIGHT: 15px; VERTICAL-ALIGN: middle
+}
+.img-caseser {
+	DISPLAY: inline-block; MAX-WIDTH: 60px; MAX-HEIGHT: 28px; VERTICAL-ALIGN: middle
+}
+.comebackhome {
+	POSITION: absolute; MARGIN-TOP: -24px; DISPLAY: inline-block; MAX-WIDTH: 114px; MAX-HEIGHT: 26px; MARGIN-LEFT: -63px; VERTICAL-ALIGN: middle; LEFT: 50%
+}
+.topright IMG {
+	MARGIN-TOP: 5px; DISPLAY: inline-block; MAX-WIDTH: 20px; MAX-HEIGHT: 20px; VERTICAL-ALIGN: middle
+}
+.erweimashu {
+	MAX-WIDTH: 120px; MAX-HEIGHT: 120px
+}
+.prepage {
+	DISPLAY: inline-block; MAX-WIDTH: 81px; MAX-HEIGHT: 27px; VERTICAL-ALIGN: middle
+}
+.nextpage {
+	DISPLAY: inline-block; MAX-WIDTH: 81px; MAX-HEIGHT: 27px; VERTICAL-ALIGN: middle
+}
+.touy {
+	WIDTH: 100%; BACKGROUND: url(touy.png) repeat-x left top; FLOAT: left; HEIGHT: 13px
+}
+.main {
+	WIDTH: 100%; FLOAT: left
+}
+.case_show {
+	MARGIN-TOP: 6px; WIDTH: 100%; MARGIN-BOTTOM: 4px; FLOAT: left; OVERFLOW: hidden
+}
+.designer {
+	MARGIN-TOP: 6px; WIDTH: 100%; MARGIN-BOTTOM: 4px; FLOAT: left; OVERFLOW: hidden
+}
+.case_show H3 {
+	LINE-HEIGHT: 25px; MARGIN: 0px; WIDTH: 160px; FONT-FAMILY: "Microsoft Yahei","Arial Black","verdana"; HEIGHT: 25px; FONT-SIZE: 13px; OVERFLOW: hidden
+}
+.case_show H3 A:link {
+	TEXT-ALIGN: center; WIDTH: 160px; HEIGHT: 25px; COLOR: #666; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.ca_a {
+	TEXT-ALIGN: center; WIDTH: 50%; FLOAT: left
+}
+.ca_b {
+	TEXT-ALIGN: center; WIDTH: 50%; FLOAT: left
+}
+.case_show {
+	PADDING-BOTTOM: 0px; MARGIN: 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.case_show UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.case_show UL LI {
+	PADDING-BOTTOM: 5px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 160px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 5px
+}
+.case_show UL LI A {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.case_show UL LI A:link {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none; text-shadow: none
+}
+.case_show UL LI A:visited {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.de_red {
+	COLOR: #900
+}
+.one {
+	BORDER-BOTTOM: #ccc 1px solid; PADDING-BOTTOM: 10px; MARGIN-TOP: 10px; WIDTH: 100%; MARGIN-BOTTOM: 10px
+}
+.menu {
+	WIDTH: 100%; FONT-FAMILY: "Microsoft Yahei"; HEIGHT: 39px; FONT-SIZE: 16px
+}
+.menu UL {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.menu LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 39px; WIDTH: 50%; DISPLAY: block; BACKGROUND: url(link.png); FLOAT: left; HEIGHT: 39px
+}
+.menu LI A {
+	DISPLAY: block; BACKGROUND: url(link.png); COLOR: #000000; TEXT-DECORATION: none
+}
+.menu LI A.tabactive {
+	POSITION: relative; BACKGROUND: url(hoverbg.png) no-repeat center bottom; COLOR: #fff; text-shadow: none
+}
+.newsliebiao {
+	WIDTH: 100%; MARGIN-BOTTOM: 5px; FLOAT: left
+}
+.tta {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BACKGROUND: url(nav_tr.png); HEIGHT: 34px; COLOR: #fff; PADDING-TOP: 0px; margin:5px 0px
+}
+.tta A:link {
+	COLOR: #999; TEXT-DECORATION: none
+}
+.tta A:visited {
+	COLOR: #999; TEXT-DECORATION: none
+}
+.newsliebiao UL {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 0px
+}
+.newsliebiao UL LI {
+	BORDER-BOTTOM: #ccc 1px dashed; LINE-HEIGHT: 35px; LIST-STYLE-TYPE: none; PADDING-LEFT: 10px; TEXT-OVERFLOW: ellipsis; WHITE-SPACE: nowrap; BACKGROUND: url(lisimg.png) no-repeat left center; HEIGHT: 35px; FONT-SIZE: 14px; OVERFLOW: hidden
+}
+.newsliebiao UL LI A {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.newsliebiao UL LI A:link {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none; text-shadow: none
+}
+.newsliebiao UL LI A:visited {
+	COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.newsliebiao SPAN {
+	FLOAT: right
+}
+.custom {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 1%; WIDTH: 98%; PADDING-RIGHT: 1%; FLOAT: left; PADDING-TOP: 0px
+}
+.custom UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.custom LI {
+	LIST-STYLE-TYPE: none; WIDTH: 104px; MARGIN-BOTTOM: 10px; FLOAT: left; HEIGHT: 50px; MARGIN-RIGHT: 2%
+}
+.custom LI IMG {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 104px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid
+}
+.contectus {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; BACKGROUND-COLOR: #3f4244; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; COLOR: #ccc; FONT-SIZE: 14px; PADDING-TOP: 10px; text-shadow: none
+}
+.contectus {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 25px; BACKGROUND-COLOR: #3f4244; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; COLOR: #ccc; FONT-SIZE: 14px; PADDING-TOP: 10px; text-shadow: none
+}
+.footer {
+	POSITION: fixed; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; BOTTOM: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(foot_bg.png); FLOAT: left; PADDING-TOP: 0px
+}
+.footer UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.footer UL LI {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 24%; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 48px; COLOR: #fff; PADDING-TOP: 10px
+}
+.footer UL LI A {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: #fff; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; text-shadow: none
+}
+.footer UL LI A:link {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: #fff; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; text-shadow: none
+}
+.footer UL LI A:visited {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: #fff; FONT-SIZE: 14px; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; text-shadow: none
+}

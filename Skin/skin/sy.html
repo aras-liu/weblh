@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD >
+
+
+<meta name="baidu-site-verification" content="RbImypjiJt" />
+
+<META 
+content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title>{$SiteKeyword$}-{$SiteName$}</title>
+<meta name="keywords" content="{$SiteKeyword$}">
+<meta name="description" content="{$SiteDescription$}">
+<META content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<LINK  rel=stylesheet type=text/css href="{$SiteSkin$}img/resetcommonindex.css" />
+
+
+
+</HEAD>
+<BODY>
+<DIV class=top>
+  <DIV class=header>
+    <DIV class=h_top>
+    <P class=fr><A  onclick=javascript:addBookmark(this) title=收藏本站  href="javascript:void(0);">收藏本站</A>|<A title=网站地图  href="/google.xml" target=_blank>xml地图</A>|<A title=联系我们  href="/wanggebu/?Contact.html" target=_blank>联系我们</A></P> </DIV>
+    <DIV class=h_con>
+      <H1 class=fl><A  href="/"><IMG class=png  src="{$SiteSkin$}img/logo.png"></A><SPAN>厂家直营&nbsp;质优价廉&nbsp;售后无忧</SPAN></H1>
+      <DIV class="h_pho fr"><A  href="/"><IMG  src="{$SiteSkin$}img/tel.png"></A></DIV>
+    </DIV>
+    <DIV class=h_nav>
+      <UL>
+        <LI><A title=网站首页 href="/"><SPAN>网站首页</SPAN></A></LI>
+        {$For(Nav,1/0/1/0)$}
+        <LI><A title={$NavName$} href="{$NavUrl$}"><SPAN>{$NavName$}</SPAN></A></LI> {$Next$}
+      </UL>
+    </DIV>
+  </DIV>
+</DIV>
+
+
+<script type="text/javascript" src="{$SiteSkin$}jquery1.42.min.js"></script>
+<script type="text/javascript" src="{$SiteSkin$}jquery.SuperSlide.2.1.1.js"></script>
+<style type="text/css">
+/* css 重置 */
+	
+/* 本例子css */
+		.slideBox {width:100%;height:458px;overflow:hidden;position:relative}
+.slideBox .bd {position:relative;height:100%;z-index:0}
+.slideBox .bd li {zoom:1;vertical-align:middle;height:458px}
+.slideBox .bd img {width:100%;height:458px;	display:block}
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+		.slideBox .prev,  .slideBox .next {position:absolute;left:3%;top:50%;margin-top:-25px;display:block;width:32px;height:40px;background:url({$SiteSkin$}slider-arrow.png) -110px 5px no-repeat;filter:alpha(opacity=50);opacity:0.5}
+.slideBox .next {left:auto;right:3%;background-position:8px 5px}
+.slideBox .prev:hover,  .slideBox .next:hover {filter:alpha(opacity=100);opacity:1}
+.slideBox .prevStop {display:none}
+.slideBox .nextStop {display:none}
+</style>
+
+
+
+<div id="slideBox" class="slideBox">
+<div class="bd">
+<ul>
+{$For(ProductList,1/41/0/0/0/0/0/0/0)$}
+<li style="background:url({$ProductListPic$}) no-repeat center"><a href="{$ProductListUrl$}" target="_blank"></a></li>
+{$Next$}
+</ul>
+</div>
+<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+<a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
+<script type="text/javascript">
+jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:200});
+</script>
+
+
+
+<DIV class=content>
+  <DIV class=h_ser>
+ 
+    <P><B>热门关键词：</B> {$For(ProductList,1/4/0/5/0/0/0/0/0)$} <A title={$ProductListTitle$}  href="{$ProductListUrl$}">{$ProductListTitle$}</A>{$Next$}</P>
+  </DIV>
+  <DIV class="prolist fl">
+    <H2><A  href="?Product/" target=_blank><IMG  src="{$SiteSkin$}img/listbt.jpg"></A></H2>
+    <DIV class=list_c0>
+      <DIV class=list_c>
+      <h4><a href="?Product/">按名称分类</a></h4>
+<ul class="u_lst1 f_cb">
+{$For(ProductList,1/4/0/0/0/0/0/0/0)$}
+<li><a title="{$ProductListTitle$}" href="{$ProductListUrl$}">{$ProductListTitle$}</a></li>
+{$Next$}
+</ul>
+
+      </DIV>
+    </DIV>
+  </DIV>
+  <DIV class="pro fr">
+    <H2><SPAN class=fr><A  href="?Product/"  target=_blank><IMG src="{$SiteSkin$}img/more2.gif"></A></SPAN><A href="/" target=_blank><IMG  src="{$SiteSkin$}img/probt.gif"></A></H2>
+    <DIV class=p_c>
+      <UL>
+{$For(ProductList,1/4/0/6/0/0/0/0/0)$}
+
+        <LI><A title="{$ProductListTitle$}" href="{$ProductListUrl$}" target=_blank>
+          <P><IMG title="{$ProductListTitle$}" class=loadimg alt="{$ProductListTitle$}"  src="{$ProductListPic$}"></P>
+          </A><SPAN><A title="{$ProductListTitle$}"  href="{$ProductListUrl$}"  target=_blank>{$ProductListTitle$}</A></SPAN> </LI>
+        {$Next$}
+      </UL>
+    </DIV>
+  </DIV>
+  <DIV class=clear></DIV>
+ 
+  
+  <div class="ys"> 
+    	<h2><img alt="" src="{$SiteSkin$}img/ysbt.jpg"></h2>
+        <div class="one">
+            <h3><img alt="" src="{$SiteSkin$}img/01.gif"></h3>
+            <p>拥有经验丰富的网格布生产专家团队，多年定制经验；<br>生产人员两班轮换制，高效快捷</p>
+        </div>
+        <div class="two one">
+            <h3><img alt="" src="{$SiteSkin$}img/02.gif"></h3>
+           <p>自有工厂生产，价格更公道<br>
+产品可回收利用，产品广泛应用于当地各种网格布工程当中、获得了客户的认可。<br>
+</p>
+        </div>
+        <div class="three one">
+            <h3><img alt="" src="{$SiteSkin$}img/03.gif"></h3>
+            <p>网格布产品出厂前严格质检；<br/>
+成品符合出厂标准，才可装车发货；
+顾客反馈信息处理及时</p>
+        </div>
+        <div class="four one">
+            <h3><img alt="" src="{$SiteSkin$}img/04.gif"></h3>
+            <p>完善的物流配送中心，网格布销往全国各地；<br/>
+
+正常生产周期4天内交货，零拖延；<br/>
+
+紧急单特殊处理，确保客户利益不受影响；
+</p>
+        </div>
+        <p class="img01"><img alt="" src="{$SiteSkin$}img/img01.jpg"></p>
+        <p class="img02"><img alt="" src="{$SiteSkin$}img/img02.jpg"></p>
+    </div>
+  
+  
+ <div class="bd01"><img  src="{$SiteSkin$}img/bd01.jpg"></div>
+  
+  
+  
+<div class="fwlct"></div>
+  <div style="margin:10px auto">
+    <H2><A  href="/" target=_blank><IMG  src="{$SiteSkin$}img/fwbt.jpg"></A></H2>
+  </div>
+  
+  
+  
+  <div class="sb_c">
+        	<ul>
+           {$For(ProductList,1/53/0/8/0/0/0/0/1)$}
+            	<li><a target="_blank" title="{$ProductListTitle$}" href="{$ProductListUrl$}">
+                                    <img title="{$ProductListTitle$}" alt="{$ProductListTitle$}" _src="{$ProductListPic$}" class="loadimg" style="display: inline;" src="{$ProductListPic$}"></a><span><a target="_blank" title="{$ProductListTitle$}" href="{$ProductListUrl$}">
+                                        {$ProductListTitle$}</a></span></li>
+                
+            {$Next$}
+                
+            </ul>
+        </div>
+  
+  
+</DIV>
+
+<div class="jzbg">
+    <div class="content">
+    	
+
+<!--客户见证-->
+
+<div class="jz fl">
+    		<h2><span class="fr"><a target="_blank" title="更多" href="?Article45/"><img alt="更多" src="{$SiteSkin$}img/more.gif"></a></span><a target="_blank" title="客户见证" href="?Article45/"><img alt="客户见证" src="{$SiteSkin$}img/jzbt.gif"></a><em>打造优质网格布&nbsp;&nbsp;&nbsp; 创造企业价值</em></h2>
+            <div class="jz_c">
+            
+            {$For(ArticleList,1/45/0/3/0/0/0/18/0)$}
+                <dl>
+                    <dt class="fl"><a target="_blank" title="{$ArticleListTitle$}" href="{$ArticleListUrl$}">
+                    <img title="{$ArticleListTitle$}" alt="{$ArticleListTitle$}" src="{$ArticleListPic$}" class="loadimg"></a></dt>
+                  <dd class="fl">
+                        <h3><a target="_blank" title="{$ArticleListTitle$}" href="{$ArticleListUrl$}">
+                          {$ArticleListTitle$}</a></h3>
+                            
+                        <p>{$ArticleListContent(55)$}</p>
+                      <span><a target="_blank" title="了解详情" href="{$ArticleListUrl$}"><img alt="了解详情" src="{$SiteSkin$}img/xq.gif"></a></span></dd>
+                </dl>
+            {$Next$}
+                 
+            </div>
+	  </div>
+
+        
+
+<div class="dt_gd fr">
+    <div class="bargd">
+        <span class="fr"><a target="_blank" title="more" href="?News/"> <img alt="more" src="{$SiteSkin$}img/more.gif"></a></span>
+        <ul>
+            <li class="li01_dt cur"><a target="_blank" title="最新动态" href="/News/"></a></li>
+       
+        </ul>
+    </div>
+    <div class="dt01">
+        <ul>
+            {$For(ArticleList,1/0/0/14/0/0/0/13/0)$}
+              <li><span class="fr">{$ArticleListTime(yyyy/mm/dd)$}</span><a target="_blank" title="{$ArticleListTitle$}" href="{$ArticleListUrl$}">{$ArticleListTitle$}</a></li>{$Next$}
+  
+        </ul>
+    </div>
+ 
+</div>
+
+
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+<DIV class=content>
+
+  <DIV class=about>
+    <DIV class=a_c>
+      <DL class=fl>
+        <DT class=fl><A href="/?About.html" target=_blank><IMG  src="{$SiteSkin$}img/gst.jpg"></A> </DT>
+        <DD class=fr>
+          <H3><A href="?About.html"  target=_blank>大庚网格布厂家介绍</A></H3>
+          <P>{$Info(1)$}<A title=了解详情 href="?About.html" target=_blank><IMG  alt=了解详情 src="{$SiteSkin$}img/xq.gif"></A></P>
+          <UL>
+          
+      <!--  <LI><A title=大庚网格布厂家介绍 href="?About.html" target=_blank><IMG class=loadimg   src="{$SiteSkin$}img/about1.jpg"></A> </LI>
+            <LI class=nobot><A title=大庚网格布厂家介绍 href="?About.html" target=_blank><IMG class=loadimg rc="{$SiteSkin$}img/about2.jpg"></A> </LI>  -->
+          </UL>
+        </DD>
+      </DL>
+    </DIV>
+  </DIV>
+  <!-- 荣誉资质 -->
+  
+  
+  
+  <div class="xc hz">
+		<h2><span class="fr"><a target="_blank" title="more" href="#"><img alt="more" src="{$SiteSkin$}img/more.gif"></a></span><a target="_blank" title="网格布现货" href="#"><img alt="网格布现货" src="{$SiteSkin$}img/rybt.gif"></a></h2>
+        <div class="xc_c">
+            <ul>
+            {$For(ProductList,1/43/0/4/0/0/0/0/0)$}
+                <li><a target="_blank" title="{$ProductListTitle$}" href="{$ProductListUrl$}">
+                            <img title="{$ProductListTitle$}" alt="{$ProductListTitle$}"class="loadimg" style="display: inline;" src="{$ProductListPic$}" /></a><span><a target="_blank" title="{$ProductListTitle$}" href="{$ProductListUrl$}">{$ProductListTitle$}</a></span></li>
+              {$Next$}
+            </ul>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  <DIV class="new fl">
+    <H2><SPAN class=fr><A title=more href="?news/" target=_blank><IMG alt=more src="{$SiteSkin$}img/more.gif"></A> </SPAN><A title=企业动态 href="?News/" target=_blank>企业动态</A> </H2>
+    <DIV class=n_con> {$For(ArticleList,1/3/0/1/0/0/0/16/1)$}
+      <P><A title={$ArticleListTitle$} 
+href="{$ArticleListUrl$}" target=_blank><IMG  title={$ArticleListTitleAll$} class=loadimg alt={$ArticleListTitleAll$}  src="{$ArticleListPic$}"></A> </P>
+      {$Next$}
+      <UL>
+        {$For(ArticleList,1/3/0/5/0/0/0/16/0)$}
+        <LI><A title={$ArticleListTitleAll$}   href="{$ArticleListUrl$}" target=_blank>{$ArticleListTitle$}</A> </LI>
+        {$Next$}
+      </UL>
+    </DIV>
+  </DIV>
+  <DIV class="dt new fl">
+    <H2><SPAN class=fr><A title=more href="?Article49/" target=_blank><IMG alt=more src="{$SiteSkin$}img/more.gif"></A> </SPAN><A title=行业资讯  href="?Article51/" target=_blank>行业资讯</A> </H2>
+    <DIV class=dt_con> {$For(ArticleList,1/49/0/1/0/0/0/12/1)$}
+      <DL>
+        <DT class=fl><A title={$ArticleListTitleAll$} href="{$ArticleListUrl$}" target=_blank><IMG title={$ArticleListTitleAll$} class=loadimg alt={$ArticleListTitleAll$} src="{$ArticleListPic$}"></A> </DT>
+        <DD class=fl>
+          <H3><A title={$ArticleListTitleAll$} href="{$ArticleListUrl$}" target=_blank>{$ArticleListTitle$}</A></H3>
+          <P>{$ArticleListContent(29)$}...<A title=了解详情 
+  href="{$ArticleListUrl$}" target=_blank><IMG alt=了解详情 src="{$SiteSkin$}img/xq.gif"></A></P>
+        </DD>
+      </DL>
+      {$Next$}
+      <DIV class=clear></DIV>
+      <UL>
+        {$For(ArticleList,1/49/0/5/0/0/0/18/0)$}
+        <LI><A title={$ArticleListTitleAll$}   href="{$ArticleListUrl$}" target=_blank>{$ArticleListTitle$}</A> </LI>
+        {$Next$}
+      </UL>
+    </DIV>
+  </DIV>
+  <DIV class="faq new fr">
+    <H2><SPAN class=fr><A title=more href="?Article38/" target=_blank><IMG alt="" src="{$SiteSkin$}img/more.gif"></A></SPAN><A title=常见问题解答 href="?Article38/" target=_blank>常见问题解答</A></H2>
+    <DIV id=ulOrderAnn class=fa_con> {$For(ArticleList,1/38/0/0/0/0/0/15/0)$}
+      <DL>
+        <DT><A title={$ArticleListTitle$} href="{$ArticleListUrl$}" target=_blank>{$ArticleListTitle$}</A> </DT>
+        <DD>{$ArticleListContent(40)$}</DD>
+      </DL>
+      {$Next$} </DIV>
+  </DIV>
+  <SCRIPT type=text/javascript>
+    new Marquee("ulOrderAnn", 0, 1, 286, 320, 50, 0, 1000, 22);
+</SCRIPT>
+  <DIV class=clear></DIV>
+</DIV>
+<DIV class=linkbg>
+  <DIV class=link>
+    <H2><SPAN class=fr><A title=申请友情链接入口  href="#" target=_blank>申请友情链接入口&gt;&gt;</A></SPAN><A title=友情链接 
+href="#" target=_blank>友情链接</A><EM>Links</EM></H2>
+    <DIV class=l_con> {$For(FriendsList,1/2/50)$} <A href="{$FriendsUrl$}"  target=_blank>{$FriendsName$}</A> {$Next$}</DIV>
+  </DIV>
+</DIV>
+{$File(bot)$}
+<!-- 返回顶部 -->
+</BODY>
+</HTML>
