@@ -20,6 +20,8 @@ Class Cls_Template
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteName$}",Fk_Site_Name)
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteUrl$}",Fk_Site_Url)
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteKeyword$}",Fk_Site_Keyword)
+		TemplateCode=ReplaceTag(TemplateCode,"{$CityName$}",CityName)
+		TemplateCode=ReplaceTag(TemplateCode,"{$City$}",City)
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteDescription$}",Fk_Site_Description)
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteSkin$}",SiteDir&"Skin/"&Fk_Site_Template&"/")
 		TemplateCode=ReplaceTag(TemplateCode,"{$SiteDir$}",SiteDir)
@@ -1665,7 +1667,8 @@ Class Cls_Template
 				End If
 			Next
 		End If
-		GetPageCrumbs=GetPageCrumbs&"&nbsp;&nbsp;&raquo;&nbsp;&nbsp;"&"<a href="""&ModuleUrl&""" title="""&ModuleName&""">"&ModuleName&"</a>"
+	'	GetPageCrumbs=GetPageCrumbs&"&nbsp;&nbsp;&raquo;&nbsp;&nbsp;"&"<a href="""&ModuleUrl&""" title="""&ModuleName&""">"&ModuleName&"</a>"
+		GetPageCrumbs=GetPageCrumbs&"&nbsp;&nbsp;&raquo;&nbsp;&nbsp;"&"<a href="""&"#"&""" title="""&CityName&ModuleName&""">"&CityName&ModuleName&"</a>"
 	End Function
 
 	'==============================
