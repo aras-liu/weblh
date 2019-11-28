@@ -1667,8 +1667,8 @@ Class Cls_Template
 				End If
 			Next
 		End If
-	'	GetPageCrumbs=GetPageCrumbs&"&nbsp;&nbsp;&raquo;&nbsp;&nbsp;"&"<a href="""&ModuleUrl&""" title="""&ModuleName&""">"&ModuleName&"</a>"
-		GetPageCrumbs=GetPageCrumbs&"&nbsp;&nbsp;&raquo;&nbsp;&nbsp;"&"<a href="""&"#"&""" title="""&CityName&ModuleName&""">"&CityName&ModuleName&"</a>"
+		ModuleUrl= "/?"& City & "/" & Split(ModuleUrl,"?")(1)
+		GetPageCrumbs=GetPageCrumbs&"&nbsp;&nbsp;&raquo;&nbsp;&nbsp;"&"<a href="""&ModuleUrl&""" title="""&ModuleName&""">"&ModuleName&"</a>"
 	End Function
 
 	'==============================
